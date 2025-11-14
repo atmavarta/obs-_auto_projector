@@ -1,0 +1,67 @@
+## 📦 Instalasi
+
+1. Download file `autoprj.lua`.
+2. Buka **OBS Studio**.
+3. Pergi ke: Tools -> Script
+4. Klik tombol **+**.
+5. Pilih file `autoprj.lua`.
+6. Script siap digunakan.
+
+---
+
+## ⚙️ Pengaturan
+
+Setelah script dimasukkan, kamu akan melihat dua pengaturan:
+
+### **1. Monitor ID**
+Menentukan monitor mana yang digunakan untuk Program Projector.
+
+- `0` = monitor pertama  
+- `1` = monitor kedua  
+- dan seterusnya (bisa di cek via Display Seting PC)
+
+### **2. Trigger Scene (opsional)**
+Jika kamu isi nama scene, projector **hanya akan terbuka saat scene tersebut aktif**.  
+Jika dikosongkan, projector selalu terbuka otomatis saat OBS mulai.
+
+---
+
+## 🚀 Cara Kerja
+
+### Jika Trigger Scene dikosongkan:
+- OBS selesai loading → projector langsung dibuka.
+
+### Jika Trigger Scene diisi:
+- Script memantau perubahan scene.
+- Saat scene yang cocok terdeteksi → membuka Program Projector.
+- Scene lain → projector tidak dibuka.
+
+---
+
+## 📝 Catatan Penting
+
+- Script ini menggunakan kode manual `PROJECTOR_PROGRAM = 2` untuk memastikan **selalu membuka Program**, menghindari bug API OBS tertentu.
+- Jika projector sudah pernah terbuka sebelumnya, script tidak akan membuka dua kali.
+- Tidak mengganggu workflow OBS lainnya.
+
+---
+
+## 🙌 Kontribusi
+
+Pull request terbuka untuk:
+- tambahan fitur
+- kompatibilitas OBS terbaru
+- optimasi kode
+- dokumentasi
+
+---
+
+## 📄 Lisensi
+
+Bebas digunakan untuk keperluan gereja, pendidikan, produksi live kecil, dan keperluan komunitas. Commercial use diperbolehkan.
+
+---
+
+## ❤️ Credit
+
+Script dibuat untuk mempermudah operator OBS yang membutuhkan tampilan Program secara otomatis tanpa klik manual.
